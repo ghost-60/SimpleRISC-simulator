@@ -10,6 +10,7 @@
 
 ## Directory Structure:
 ### CS112-Project
+```
   |
   |- bin
       |
@@ -36,7 +37,7 @@
       |- assignment4.mem
       |- array_add.mem
 
-
+```
 ## Software description      
 ### SimpleRISC ISA
 -> SimpleRisc is a simple, generic, complete and consice RISC ISA.
@@ -60,7 +61,7 @@
 -> Each instruction is encoded into a 32 bit value.
 -> The memory is a large array of bytes. A part of it saves the
    instructions and the rest of it is devoted to store the data.     
--> Each Simple Risc instruction can be divided in 3 instruction formats:
+-> Each SimpleRISC instruction can be divided in 3 instruction formats:
     - Branch:    Contains a 5-bit opcode and 27 bit offset.
     - Register:  Encodes a 3-address instruction with two register source
                  operands and one register destination operand.
@@ -68,6 +69,7 @@
                  ne of the operands.
 
 ## Simulator for SimpleRISC processor
+```
  -> Our Simulator is computer program written in a C language the simulates the
     working of the SimpleRISC processor that run over the SimpleRISC ISA.
  -> The program takes the instructions from the .mem file.
@@ -77,21 +79,22 @@
     memory array ‘MEM’.
  -> Finally the run_simplesim() method is run which calls the following
     functions:
+
      - fetch(): Reads from the instruction memory array MEM according to the PC
                 value and updates the instruction register.
      - decode(): Reads the instruction register, reads operand1,operand2 from
-                 register file.It also calculates the values of the immediate
+                 register file. It also calculates the values of the immediate
                  operand and the branch target by unpacking the offset embedded
                  in the instruction.
      - execute(): Calculates the control signals based on the opcode present in
                   the instruction. Executes the ALU operation based on the
-                  control signal calculated and updates the other signals.It
+                  control signal calculated and updates the other signals. It
                    also calculates the branchPC.
      - mem(): Performs two operations, either reads the MEM array or writes the
               MEM array based on the control signal.
 
      - write_back(): Writes the results back to register file.
-
+```
 ## How to build
 For building:
     $cd src
@@ -109,7 +112,7 @@ For cleaning the project:
  After the execution of the program, the MEM array is written in the
  'data_out.mem' file and the state of the variables is printed on the
  console and also stored in a 'summary.txt' file as shown:
-
+```
 
  +--------------------------------------------------------------------------------------+
  |        ======================================================================        |
@@ -152,6 +155,7 @@ For cleaning the project:
  |             r10=****, r11=****, r12=****, r13=****, sp=****, ra=****.                |
  |                                                                                      |
  +--------------------------------------------------------------------------------------+
+```
 
 ## Test Results
 1. simple_add.mem
