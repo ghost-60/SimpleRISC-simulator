@@ -1,6 +1,6 @@
-#Functional Simulator for SimpleRISC processor
+# Functional Simulator for SimpleRISC processor
 
-##Table of contents
+## Table of contents
 1. Directory Structure
 2. Software description      
 3. How to build
@@ -8,9 +8,8 @@
 5. Output
 6. Test Results
 
-##Directory Structure:
---------------------
-###CS112-Project
+## Directory Structure:
+### CS112-Project
   |
   |- bin
       |
@@ -38,8 +37,8 @@
       |- array_add.mem
 
 
-##Software description      
-###SimpleRISC ISA
+## Software description      
+### SimpleRISC ISA
 -> SimpleRisc is a simple, generic, complete and consice RISC ISA.
 -> The assembly language of Simplerisc has only 21 instructions.
     - Register Transfer Instruction (mov)
@@ -68,7 +67,7 @@
     - Immediate: Encodes a 3-address instruction that has an immediate as
                  ne of the operands.
 
-##Simulator for SimpleRISC processor
+## Simulator for SimpleRISC processor
  -> Our Simulator is computer program written in a C language the simulates the
     working of the SimpleRISC processor that run over the SimpleRISC ISA.
  -> The program takes the instructions from the .mem file.
@@ -93,7 +92,7 @@
 
      - write_back(): Writes the results back to register file.
 
-##How to build
+## How to build
 For building:
     $cd src
     $make
@@ -102,10 +101,10 @@ For cleaning the project:
     $cd src
     $make clean
 
-##How to execute
+## How to execute
 ./mySimpleSim test/input_file.mem
 
-##Output
+## Output
 
  After the execution of the program, the MEM array is written in the
  'data_out.mem' file and the state of the variables is printed on the
@@ -154,7 +153,7 @@ For cleaning the project:
  |                                                                                      |
  +--------------------------------------------------------------------------------------+
 
-##Test Results
+## Test Results
 1. simple_add.mem
     Calculates 4(r1)+12(r2)=16(r3).
 
